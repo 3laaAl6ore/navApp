@@ -72,15 +72,37 @@ const AppBottomBarNavigator = createMaterialBottomTabNavigator();
 
 export const AppBottomBar = ()=>{
     return(
-        <AppBottomBarNavigator.Navigator>
+        <AppBottomBarNavigator.Navigator 
+     
+    /** // to effect all taps
+        activeColor={'#ffffff'} inactiveColor={'#222222'}
+        barStyle=
+        {
+            {
+                backgroundColor:'#dddccc'
+            }
+        }
+        */
+        >
             <AppBottomBarNavigator.Screen 
             options=
             {
                 {
                     tabBarLabel :'dashbord',
-                    tabBarIcon:({  }) =>(<MaterialIcons name='dashboard-customize' color="#ffaa00" size ={26}/>)
+                    tabBarIcon:({foucused,color,size}) =>
+                    {
+                        const iconSize = foucused ?  28:26
+                        const iconcColor = foucused ? 'white':'#222222'
+                        const iconShape = foucused ? 'view-dashboard':'view-dashboard-outline'
+                        return(
+                        <MaterialCommunityIcons name={iconShape} color={iconcColor} size ={iconSize}/>
+                        )
+                    }
                 }
             }
+            //<MaterialCommunityIcons name='tshirt-crew'   size ={26}/>
+            //<MaterialCommunityIcons name='cart'  size ={26}/>
+
             name='dashboard' 
             component = {DashbordStack} 
             />
@@ -92,7 +114,15 @@ export const AppBottomBar = ()=>{
             {
                 {
                     tabBarLabel :'Catalog',
-                    tabBarIcon:({  }) =>(<Entypo name='text-document-inverted' color="#ffaa00" size ={26}/>)
+                    tabBarIcon:({foucused,color,size}) =>
+                    {
+                        const iconSize = foucused ?  28:26
+                        const iconcColor = foucused ? 'white':'#222222'
+                        const iconShape = foucused ? 'view-dashboard':'view-dashboard-outline'
+                        return(
+                        <MaterialCommunityIcons name={iconShape} color={iconcColor} size ={iconSize}/>
+                        )
+                    }
                 }
             }
             />
@@ -103,7 +133,15 @@ export const AppBottomBar = ()=>{
             {
                 {
                     tabBarLabel :'Cart',
-                    tabBarIcon:({  }) =>(<Entypo name='shopping-cart' color="#ffaa00" size ={26}/>)
+                    tabBarIcon:({foucused,color,size}) =>
+                    {
+                        const iconSize = foucused ?  28:26
+                        const iconcColor = foucused ? 'white':'#222222'
+                        const iconShape = foucused ? 'view-dashboard':'view-dashboard-outline'
+                        return(
+                        <MaterialCommunityIcons name={iconShape} color={iconcColor} size ={iconSize}/>
+                        )
+                    }
                 }
             }
             />

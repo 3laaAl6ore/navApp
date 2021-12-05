@@ -15,7 +15,7 @@ const CartScreen  = (props) => {
 
 export const screenOptions = navData =>{
     return{
-        headerTile:'Cart'
+        headerTitle:'Cart'
     }
 }
 

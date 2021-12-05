@@ -15,7 +15,7 @@ const CatalogScreen  = (props) => {
 
 export const screenOptions = navData =>{
     return{
-        headerTile:'Catalog'
+        headerTitle:'Catalog'
     }
 }
 
